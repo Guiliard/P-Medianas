@@ -34,6 +34,7 @@ src/
 
 dataset/
 ├── small/              # Problema pequeno (14 clientes, 6 facilidades, p=3)
+├── medium/             # Problema médio (24 clientes, 9 facilidades, p=5)
 └── big/                # Problema grande (50 clientes, 20 facilidades, p=10)
 
 gusek/                  # Arquivos para execução no solver GUSEK
@@ -70,4 +71,4 @@ O programa gera:
 - Custo total da solução
 - GAP percentual em relação ao ótimo conhecido
 - Tempo de execução e comparação com tempo de referência
-- Matriz de distâncias salva em `output/<small|big>/distance_matrix.txt`
+- Matriz de distâncias salva em `output/<small|medium|big>/distance_matrix.txt`
