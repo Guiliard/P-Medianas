@@ -79,7 +79,7 @@ int main() {
                     metrics* m = create_metrics();
                     start_metrics(m);
                     
-                    solution* sol_grasp = grasp(prob, 100, 0.3f);
+                    solution* sol_grasp = grasp(prob, MAX_ITER, ALPHA);
                     
                     stop_metrics(m);
                     
@@ -99,7 +99,7 @@ int main() {
                     metrics* m = create_metrics();
                     start_metrics(m);
                     
-                    solution* sol_filtered_grasp = filtered_grasp(prob, 100, 0.3f, 5);
+                    solution* sol_filtered_grasp = filtered_grasp(prob, MAX_ITER, ALPHA, LIMIT);
                     
                     stop_metrics(m);
                     
@@ -119,7 +119,7 @@ int main() {
                     metrics* m = create_metrics();
                     start_metrics(m);
                     
-                    solution* sol_ils = ils(prob, 50);
+                    solution* sol_ils = ils(prob, MAX_ITER);
                     
                     stop_metrics(m);
                     
@@ -139,7 +139,7 @@ int main() {
                     metrics* m = create_metrics();
                     start_metrics(m);
                     
-                    solution* sol_smart_ils = smart_ils(prob, 50, 3);
+                    solution* sol_smart_ils = smart_ils(prob, MAX_ITER, LIMIT);
                     
                     stop_metrics(m);
                     
