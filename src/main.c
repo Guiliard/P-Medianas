@@ -37,6 +37,22 @@ int main() {
                     problem_loaded = 1;
                     printf("\nProblema carregado com sucesso! Matriz de distâncias salva em output/small/distance_matrix.txt\n");
                 } else if (problem_option == 2) {
+                    printf("\nCarregando problema médio (Medium)...\n");
+                    if (problem_loaded && prob != NULL) {
+                        free_problem(prob);
+                    }
+                    prob = init_environment(
+                        "dataset/medium/customers.txt", 
+                        "dataset/medium/facilities.txt", 
+                        "dataset/medium/solution.txt", 
+                        "dataset/medium/pmedian.txt",
+                        "dataset/medium/time.txt"
+                    );
+                    print_problem(prob);
+                    print_matrix(prob->num_customers, prob->num_facilities, prob->distance_matrix, "output/medium/distance_matrix.txt");
+                    problem_loaded = 1;
+                    printf("\nProblema carregado com sucesso! Matriz de distâncias salva em output/medium/distance_matrix.txt\n");
+                } else if (problem_option == 3) {
                     printf("\nCarregando problema grande (Big)...\n");
                     if (problem_loaded && prob != NULL) {
                         free_problem(prob);
