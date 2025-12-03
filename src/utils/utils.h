@@ -9,7 +9,7 @@
 #define INT_MAX __INT_MAX__
 #define FLT_MAX	__FLT_MAX__
 
-#define MAX_ITER 15
+#define MAX_ITER 50
 #define ALPHA 0.3f
 #define LIMIT 5
 
